@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
@@ -28,6 +29,13 @@ module.exports = {
           ], // to compile react to ES5
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader, // instead of style-loader
+          'css-loader'
+        ]
+      }
     ],
   },
 
@@ -41,6 +49,10 @@ module.exports = {
         exposes: {
           './Button':
             './src/Button',
+            './App-Mfe1': '/src/App',
+            './Orders': '/src/components/Orders',
+            './Products': '/src/components/Products'
+
         },
       }
     ),
@@ -48,5 +60,6 @@ module.exports = {
       template:
         './public/index.html',
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
