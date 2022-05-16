@@ -1,0 +1,92 @@
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css ***!
+  \***************************************************************/
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.get-userData {
+    color: #183954;
+    background: white;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+}
+.product-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #183954;
+}
+.liquid {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #183954;
+}
+.liquid .water {
+  position: absolute;
+  font-size: 10vw;
+}
+.liquid .water:nth-child(1) {
+  color: #fff;
+  text-shadow: -2px 2px 0px #183954,
+  -4px 4px 0px #183954,
+  -6px 6px 0px #183954,
+  -8px 8px 0px #183954,
+  -18px 18px 20px rgba(0, 0, 0, 0.5),
+  -18px 18px 50px rgba(0, 0, 0, 0.5);
+}
+.liquid .water:nth-child(2) {
+  color: #2196f3;
+  opacity: 0.5;
+  animation: animate 3s ease-in-out infinite;
+}
+.liquid .water:nth-child(3) {
+  color: #2196f3;
+  opacity: 0.5;
+  animation: animate 3s ease-in-out infinite;
+}
+.liquid .water:nth-child(4) {
+  color: #2196f3;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,100% {
+      clip-path: polygon(0% 46%,16% 45%,34% 52%,50% 61%,
+      68% 65%,85% 61%,100% 53%,100% 100%,0% 100%);
+  }
+  50% {
+      clip-path: polygon(0% 59%,18% 67%,36% 70%,51% 66%,
+      66% 54%,82% 49%,100% 45%,100% 100%,0% 100%);
+  }
+}
+
+
+.mfe1-title {
+    background: #183954;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+.mfe1-nav {
+  padding: 10px;
+  border: 1px solid #183954;
+}
+.mfe1-nav a {
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 20px;
+}
+.mfe1-nav a:hover {
+  background: #183954;
+  color: #fff;
+  padding: 12px;
+}
